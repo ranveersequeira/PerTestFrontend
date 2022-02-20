@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@800&family=Roboto+Slab:wght@400;700&display=swap');
+
+  @font-face {
+    font-family: "Mirage";
+    font-weight: 800;
+    src: url("/fonts/Mirage/MirageBlack.otf") format("otf");
+    src: url("/fonts/Mirage/MirageBlack.woff") format("woff");
+    src: url("/fonts/Mirage/MirageBlack.woff2") format("woff2");
+  }
+
+  @font-face {
+    font-family: "BrittanySignature";
+    font-weight: 500;
+    src: url("/fonts/BrittanySignature/BrittanySignature.otf") format("otf");
+    src: url("/fonts/BrittanySignature/BrittanySignature.woff") format("woff");
+    src: url("/fonts/BrittanySignature/BrittanySignature.woff2") format("woff2");
+  }
+}
+
+a {
+  @apply underline;
+}
+
+p {
+  @apply font-serif mb-8
+}
+
+label {
+  @apply block uppercase text-xs
+}
+
+input[type=text],
+input[type=email],
+input[type=password] {
+  @apply bg-gray-100 font-serif h-12 w-full px-4 mb-4
+}
+
+input[type=checkbox] {
+  @apply hidden;
+}
+
+input[type=checkbox] + label {
+  @apply bg-checkbox-unchecked bg-no-repeat pl-5
+}
+
+input[type=checkbox]:checked + label {
+  @apply bg-checkbox-checked bg-no-repeat pl-5
+}
+
+.content {
+  @apply p-8
+}
+
+.box {
+  @apply bg-white shadow-lg p-6
+}
+
+.page-title {
+  @apply font-display text-5xl md:text-6xl lg:text-7xl mb-2
+}
+
+.answer {
+  @apply w-18 h-18 rounded-full border-4 border-black flex justify-center items-center uppercase leading-snug text-sm
+}
+
+.button {
+  @apply h-12 bg-primary font-handwriting block;
+}
+
+.button-text {
+  @apply text-6xl relative -top-2;
+}
